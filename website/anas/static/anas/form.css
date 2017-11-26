@@ -67,6 +67,8 @@ nav{
 .fieldwrapper_separate{
     margin: 10px;
     padding-bottom: 10px;
+    
+    
     display: flex;
     justify-content: center;
 }
@@ -106,7 +108,18 @@ p{
     color: white;
     width: 100px;
     border-style: none;
-
+    padding: 10px 30px;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.6);
+    cursor: pointer;
+    border-radius:5px;
+    transition: all ease-in-out 300ms;
+    text-transform: uppercase;
+    
+    
+}
+.submit:hover{
+    box-shadow: 0px 37px 20px -20px rgba(0,0,0,0.2);
+    transform: translate(0px, -10px)
 }
 label{
     padding: 5px 0;

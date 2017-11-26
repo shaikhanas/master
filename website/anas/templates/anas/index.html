@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>resume</title>
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'anas/form.css' %}"/>
+</head>
+<body>
+
+<div class="container">
+     <nav>
+                <div class="naam">
+                    ANAS SHAIKH
+
+                </div>
+                <div class="links">
+                    <a  href="#">SKILLS</a>
+                    <a  href="contact">CONTACT</a>
+                    <a  href="#">Resume</a>
+                </div>
+
+     </nav>
+
+    <div class="form_text">
+    <p>Looking for someone like me to join your team ? Get in touch on social media or send me an email </p>
+    </div>
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{ form.non_field_errors }}
+    <div class="fieldwrapper">
+        {{ form.subject.errors }}
+        <label for = "{{ form.subject.id_for_label }}">
+            Email subject:
+        </label>
+        {{ form.subject }}
+    </div>
+
+     <div class="fieldwrapper">
+        {{ form.message.errors }}
+        <label for = "{{ form.message.id_for_label }}">
+            your message:
+        </label>
+        {{ form.message }}
+    </div>
+
+     <div class="fieldwrapper">
+        {{ form.sender.errors }}
+        <label for = "{{ form.sender.id_for_label }}">
+            your email addres :
+        </label>
+        {{ form.sender }}
+    </div>
+
+    <div class="fieldwrapper">
+        {{ form.cc_myself.errors }}
+        <label for = "{{ form.cc_myself.id_for_label }}">
+            cc_yourself:
+        </label>
+        {{ form.cc_myself }}
+    </div>
+
+    <div class="fieldwrapper_separate">
+        <input class ="submit" type="submit" value="Submit"/>
+    </div>
+    </form>
+
+    <footer>
+        <div class="icons">
+            <a id="facebook" href="my_facebookpage" target="_blank">
+            {% load static %}
+
+                <img class="image" src="{% static 'anas/face.png' %}">
+
+             </a>
+            <a id="pinterest" href='my_pinterestpage' target="_blank">
+            {% load static %}
+
+                <img class="image" src="{% static 'anas/pinterest.png' %}">
+
+            </a>
+
+             <a id="linkedin" href='my_linkedinpage' target="_blank">
+            {% load static %}
+
+                <img class="image" src="{% static 'anas/linkedin.png' %}">
+
+            </a>
+
+        </div>
+
+        
+    </footer>
+
+</div>
+
+
+</body>
+</html>
